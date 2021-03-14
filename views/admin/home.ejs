@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/ccs/style.css" >
+</head>
+<body>
+    <%- include('../includes/head.ejs') %>
+
+    <div class="holder">
+        <% for (let info of infos) { %>
+            <h1> Employee of the month</h1>
+            <div class="avatar">
+                <a href="/admin/edit-info">
+                    <img src="<%= info.imageUrl %>" class="user">
+                </a>
+            </div>
+            <p>Name</p>
+            <h1><%= info.name %></h1>
+            <p>Achievement</p>
+            <h1><%= info.description %></h1>
+        <% } %>
+    </div>
+    
+    <%- include('../includes/end.ejs') %>
